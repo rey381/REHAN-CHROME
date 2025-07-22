@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - REHANCHROME</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">REHANCHROME</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="galeriberita.html" class="nav-link">News</a>
+        <a href="galerifoto.html" class="nav-link">Foto</a>
+        <a href="galerivideo.html" class="nav-link">Video</a>
+        <a href="aboutme.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-container">
+    <!-- ======================= ANGGI REHAN ======================= -->
+    <div class="profile">
+      <img src="rey.jpg" alt="Anggi Rehan Pangestu" />
+      <h3>Anggi Rehan Pangestu</h3>
+      <p><a href="mailto:anggirhnpangstu@gmail.com">anggirhnpangstu@gmail.com</a></p>
+      <p><a href="tel:+62895323159683">0895-3231-59683</a></p>
+      <p>Kotabumi</p>
+      <p><a href="https://instagram.com/anggi_rehanpangestu" target="_blank">@anggi_rehanpangestu</a></p>
+    </div>
+
+    <!-- ======================= ANGGOTA 1 & 2 ======================= -->
+    <div class="members">
+      <div class="profile">
+        <img src="herlina.jpg" alt="Anggota 1" />
+        <h3>Nama Anggota 1</h3>
+        <p><a href="mailto:anggota1@email.com">anggota1@email.com</a></p>
+        <p><a href="tel:+628xxxx">08xx-xxxx-xxxx</a></p>
+        <p>Alamat Anggota 1</p>
+        <p><a href="https://instagram.com/anggota1" target="_blank">@anggota1</a></p>
+      </div>
+      <div class="profile">
+        <img src="meylin.jpg" alt="Anggota 2" />
+        <h3>Nama Anggota 2</h3>
+        <p><a href="mailto:anggota2@email.com">anggota2@email.com</a></p>
+        <p><a href="tel:+628xxxx">08xx-xxxx-xxxx</a></p>
+        <p>Alamat Anggota 2</p>
+        <p><a href="https://instagram.com/anggota2" target="_blank">@anggota2</a></p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2025 anggi rehan pangestu.</p>
+      </div>
+    </footer>
+    <script>
+      // Efek transisi halaman
+      const links = document.querySelectorAll("a[href]");
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const url = this.href;
+          if (!url.includes("#") && !this.target) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = url;
+            }, 400);
+          }
+        });
+      });
+    </script>
+</body>
+</html>

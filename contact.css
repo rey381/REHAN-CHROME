@@ -1,0 +1,141 @@
+/* Global Reset */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #1e1e28, #0d0d10);
+  color: #e2e8f0;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  backdrop-filter: blur(16px);
+  background: rgba(43, 43, 51, 0.75);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-weight: 900;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav {
+  display: flex;
+  gap: 16px;
+}
+.nav-link {
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.nav-link:hover {
+  background-color: rgba(168, 85, 247, 0.2);
+}
+.nav-link.active {
+  background-color: #a855f7;
+  color: #fff;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto;
+  gap: 48px;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+/* Profile Box */
+.profile {
+  text-align: center;
+  animation: fadeUp 0.8s ease forwards;
+}
+.profile img {
+  width: 180px;
+  border-radius: 12px;
+  border: 3px solid rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 18px rgba(147, 51, 234, 0.4);
+  transition: transform 0.3s ease;
+}
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+}
+.profile h3 {
+  font-size: 1rem;
+  color: #c084fc;
+  margin-top: 12px;
+}
+.profile p {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  margin: 4px 0;
+}
+
+/* Anggota */
+.members {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Instagram Link Style */
+.profile a[href*="instagram.com"] {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+.profile a[href*="instagram.com"]:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+/* Hover for All Links */
+a:hover {
+  color: #f472b6;
+}
+
+/* Animasi */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .members {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
